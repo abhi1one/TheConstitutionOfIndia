@@ -57,3 +57,11 @@ for i in *.zip;do
         create "$i"
     fi
 done;
+
+cp COMPLETE.md "$DIR/README.md"
+cd $DIR
+git add README.md
+git commit -am "Adds README"
+git remote add origin git@github.com:captn3m0/constitution.git
+git push origin master -f
+cd ..
